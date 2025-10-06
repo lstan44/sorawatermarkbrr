@@ -41,14 +41,18 @@ function run() {
   const html = readFileSync(indexHtmlPath, 'utf8');
   const canonical = getCanonicalUrlFromIndexHtml(html);
 
-  const sitemap = generateSitemapXml(canonical);
-  const robots = generateRobotsTxt(canonical);
+  // Prefer explicit env override or Cloudflare Pages URL when available
+  const envUrl = process.env.SEO_SITE_URL || process.env.CF_PAGES_URL || '';
+  const siteUrl = (envUrl || canonical).replace(/\/$/, '');
+
+  const sitemap = generateSitemapXml(siteUrl);
+  const robots = generateRobotsTxt(siteUrl);
 
   writeFileSync(resolve(publicDir, 'sitemap.xml'), sitemap);
   writeFileSync(resolve(publicDir, 'robots.txt'), robots);
 
   // eslint-disable-next-line no-console
-  console.log(`Generated sitemap.xml and robots.txt using canonical: ${canonical}`);
+  console.log(`Generated sitemap.xml and robots.txt using site URL: ${siteUrl}`);
 }
 
 run();

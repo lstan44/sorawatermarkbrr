@@ -6,10 +6,12 @@
   "scripts": {
     "dev": "vite",
     "build": "vite build",
+    "prebuild": "node scripts/generate-seo.js",
     "lint": "eslint .",
     "preview": "vite preview",
     "typecheck": "tsc --noEmit -p tsconfig.app.json",
-    "seo:gen": "node scripts/generate-seo.js"
+    "seo:gen": "node scripts/generate-seo.js",
+    "pages:seo": "SEO_SITE_URL=$CF_PAGES_URL node scripts/generate-seo.js"
   },
   "dependencies": {
     "@supabase/supabase-js": "^2.57.4",
