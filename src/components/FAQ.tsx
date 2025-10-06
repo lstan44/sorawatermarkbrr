@@ -6,8 +6,16 @@ const faqs = [
     answer: 'Simply upload your Sora-generated video to our tool, and our AI will automatically detect and remove the watermark while preserving the original quality. The entire process takes less than 30 seconds.'
   },
   {
+    question: 'How to remove the Sora watermark without cropping or blurring?',
+    answer: 'Our AI removes the Sora watermark by reconstructing the underlying pixels, so you do not need to crop or blur your video. This keeps full frame size and clarity.'
+  },
+  {
     question: 'Is it really free to remove Sora watermarks?',
     answer: 'Yes! Our basic watermark removal service is completely free. You can remove watermarks from unlimited Sora 2 videos without any cost or subscription.'
+  },
+  {
+    question: 'What is the best Sora watermark remover online?',
+    answer: 'This site is optimized specifically for OpenAI Sora 2 videos, delivering fast, high‑quality watermark removal with privacy protections and instant downloads.'
   },
   {
     question: 'Will removing the watermark affect video quality?',
@@ -16,6 +24,10 @@ const faqs = [
   {
     question: 'What video formats does the Sora watermark remover support?',
     answer: 'We support all common video formats that OpenAI Sora 2 generates, including MP4, MOV, WebM, and more. Our tool automatically handles format detection and conversion.'
+  },
+  {
+    question: 'Can I remove the Sora 2 logo watermark from the corner?',
+    answer: 'Yes. Our model detects Sora watermark placements in corners, edges, and overlay regions. It removes the logo while preserving background details.'
   },
   {
     question: 'How long does it take to remove a Sora watermark?',
@@ -28,6 +40,10 @@ const faqs = [
   {
     question: 'Can I use this for commercial Sora videos?',
     answer: 'Yes, you can use our watermark remover for both personal and commercial Sora 2 videos. Make sure you comply with OpenAI\'s Sora usage terms for your specific use case.'
+  },
+  {
+    question: 'Does this work for all OpenAI Sora watermark versions?',
+    answer: 'Yes. Our AI is trained on multiple Sora 2 watermark styles and placements to ensure reliable removal across versions.'
   },
   {
     question: 'Does it work with all Sora 2 watermark placements?',
